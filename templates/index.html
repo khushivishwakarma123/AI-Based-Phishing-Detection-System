@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PhishGuard AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>🛡️</span>
+            PhishGuard <b>AI</b>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#analysis">Analysis</a>
+            <a href="#tips">Security Tips</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="badge">
+            🛡️ AI-POWERED SECURITY
+        </div>
+
+        <h1>
+            Detect Phishing Websites
+            <span>Before It's Too Late</span>
+        </h1>
+
+        <p>
+            Analyze suspicious URLs using machine learning
+            and protect yourself from phishing attacks.
+        </p>
+
+
+        <!-- Scanner -->
+
+        <div class="scanner">
+
+            <div class="input-wrapper">
+
+                <span>🔗</span>
+
+                <input
+                    type="text"
+                    id="urlInput"
+                    placeholder="Enter website URL..."
+                >
+
+            </div>
+
+            <button onclick="checkURL()">
+                <span>🔍</span>
+                Scan URL
+            </button>
+
+        </div>
+
+
+        <div class="secure-text">
+            🔒 Your URL is analyzed securely
+        </div>
+
+    </section>
+
+
+    <!-- Loading -->
+
+    <div id="loading">
+
+        <div class="loader"></div>
+
+        <p>Analyzing website security...</p>
+
+    </div>
+
+
+    <!-- Result -->
+
+    <section id="result-section">
+
+        <div id="result"></div>
+
+    </section>
+
+
+    <!-- Analysis -->
+
+    <section id="analysis" class="analysis-section">
+
+        <h2>URL Security Analysis</h2>
+
+        <p class="section-description">
+            Machine learning analyzes multiple characteristics
+            of the submitted URL.
+        </p>
+
+        <div id="feature-container">
+
+            <div class="feature-card">
+                <span>🔗</span>
+                <div>
+                    <h3>URL Length</h3>
+                    <p id="url-length">-</p>
+                </div>
+            </div>
+
+
+            <div class="feature-card">
+                <span>🔐</span>
+                <div>
+                    <h3>HTTPS</h3>
+                    <p id="https-status">-</p>
+                </div>
+            </div>
+
+
+            <div class="feature-card">
+                <span>🌐</span>
+                <div>
+                    <h3>IP Address</h3>
+                    <p id="ip-status">-</p>
+                </div>
+            </div>
+
+
+            <div class="feature-card">
+                <span>⚠️</span>
+                <div>
+                    <h3>Suspicious Words</h3>
+                    <p id="suspicious-status">-</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Security Tips -->
+
+    <section id="tips" class="tips-section">
+
+        <h2>🛡️ Stay Safe Online</h2>
+
+        <div class="tips">
+
+            <div class="tip">
+                <span>🔐</span>
+                <h3>Check HTTPS</h3>
+                <p>
+                    Look for HTTPS before entering sensitive information.
+                </p>
+            </div>
+
+
+            <div class="tip">
+                <span>🔗</span>
+                <h3>Check the URL</h3>
+                <p>
+                    Be careful with unusual domains and suspicious links.
+                </p>
+            </div>
+
+
+            <div class="tip">
+                <span>🎣</span>
+                <h3>Avoid Phishing</h3>
+                <p>
+                    Never enter passwords on websites you do not trust.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            🛡️ PhishGuard AI
+        </p>
+
+        <p>
+            AI-Based Phishing Detection System
+        </p>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+</body>
+
+</html>
